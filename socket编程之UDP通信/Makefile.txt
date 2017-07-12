@@ -1,0 +1,10 @@
+.PHONY:all
+all:udpServer udpClient
+udpClient:udpClient.c
+        gcc -o $@ $^
+udpServer:udpServer.c
+        gcc -o $@ $^
+.PHONY:clean
+clean:
+        rm -f udpServer udpClient
+                                      
